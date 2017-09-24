@@ -1,19 +1,17 @@
 package tb;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.testng.Assert;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import tb.constant.Const;
-import tb.step.PaymentDetailsStep;
-import tb.util.CommonUtil;
 import tb.step.ChooseCommunalSupplierPaymentStep;
 import tb.step.ChoosePaymentTypeStep;
 import tb.step.NavigationStep;
+import tb.step.PaymentDetailsStep;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 
 
 public class PaymentTest extends BaseUITest {

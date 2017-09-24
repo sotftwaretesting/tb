@@ -1,6 +1,9 @@
 package tb.util;
 
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import tb.webdriver.Init;
@@ -9,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 
 public class UiUtil {
 
-    private static int timeOut = 5;
+    private static int timeOut = 30;
 
     public static WebElement waitToBeClickable(WebElement element) {
         WebDriverWait wait = new WebDriverWait(Init.getWebDriver(), timeOut);

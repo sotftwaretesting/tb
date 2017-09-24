@@ -4,8 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import tb.constant.Const;
-import tb.webdriver.WaitToBeVisible;
 import tb.util.UiUtil;
+import tb.webdriver.WaitToBeVisible;
 
 @WaitToBeVisible(xpath = Const.XPATH_LOG)
 public class Payment extends AbstractPage {

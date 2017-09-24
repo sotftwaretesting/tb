@@ -1,16 +1,12 @@
 package tb.page;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import tb.constant.Const;
 import tb.util.CommonUtil;
-import tb.webdriver.Init;
 import tb.webdriver.WaitToBeVisible;
-
-import java.util.Map;
 
 @WaitToBeVisible(xpath = Const.XPATH_LOG)
 public class PaymentDetails extends AbstractPage {
@@ -38,7 +34,7 @@ public class PaymentDetails extends AbstractPage {
     private String xPathFromElement = ".//ancestor::div[@class='ui-form__field']/div[@class='ui-form-field-error-message ui-form-field-error-message_ui-form']";
 
     public boolean checkPayerCodeField(String inputData, String errorMessage) {
-        CommonUtil.pause(3);
+        CommonUtil.pause(1);
         clearAllFields();
         payerCode.sendKeys(inputData);
         paymentButton.click();
@@ -46,7 +42,7 @@ public class PaymentDetails extends AbstractPage {
     }
 
     public boolean checkPaymentPeriodField(String inputData, String errorMessage) {
-        CommonUtil.pause(3);
+        CommonUtil.pause(1);
         clearAllFields();
         timePeriod.sendKeys(inputData);
         paymentButton.click();
@@ -54,7 +50,7 @@ public class PaymentDetails extends AbstractPage {
     }
 
     public boolean checkAmountField(String inputData, String errorMessage) {
-        CommonUtil.pause(3);
+        CommonUtil.pause(1);
         clearAllFields();
         amount.sendKeys(inputData);
         paymentButton.click();
