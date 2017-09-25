@@ -22,6 +22,7 @@ public class CommunalPayment extends AbstractPage {
         String currentLocation = location.getText().trim();
         if (!StringUtils.equalsIgnoreCase(region, currentLocation)) {
             location.click();
+            UiUtil.waitToBeVisible(By.xpath("//div[@class='ui-modal__container ui-modal__container_regions']"));
             String toChange = String.format("(//span[contains(text(),'%s')])[last()] ", region);
             UiUtil.waitToBeClickable(Init.getWebDriver().findElement(By.xpath(toChange))).click();
         }
